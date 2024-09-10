@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int compare(const void *a, const void *b) {
+    return (*(int*)a - *(int*)b);
+}
+
+int main() {
+    int nilaiSaya;
+    
+    scanf("%d", &nilaiSaya);
+    
+    int nilai[nilaiSaya];
+    
+    for(int i = 0; i < nilaiSaya; i++) {
+        scanf("%d", &nilai[i]);
+        
+    }
+    qsort(nilai, nilaiSaya, sizeof(int), compare);
+    
+    for(int i = 0; i < nilaiSaya; i++) {
+        printf("%d\n", nilai[i]);
+    }
+    
+    return 0;
+}
