@@ -1,8 +1,5 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
-    
+
 int isPrime(long long N) {
     if (N <= 1) return 0;
     if (N == 2 || N == 3) return 1;
@@ -19,11 +16,7 @@ int main() {
     long long N;
     scanf("%lld", &N);
 
-    if (isPrime(N)) {
-        printf("PRIMA\n");
-    } else {
-        printf("BUKAN\n");
-    }
+    printf(isPrime(N) ? "PRIMA\n" : "BUKAN\n");
 
     return 0;
 }
