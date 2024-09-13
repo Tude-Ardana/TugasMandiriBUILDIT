@@ -1,6 +1,4 @@
 #include <stdio.h>
-#include <string.h>
-#include <math.h>
 #include <stdlib.h>
 
 int compare(const void *a, const void *b) {
@@ -8,21 +6,19 @@ int compare(const void *a, const void *b) {
 }
 
 int main() {
-    int nilaiSaya;
-    
-    scanf("%d", &nilaiSaya);
-    
-    int nilai[nilaiSaya];
-    
-    for(int i = 0; i < nilaiSaya; i++) {
-        scanf("%d", &nilai[i]);
-        
+    int n;
+    scanf("%d", &n);
+
+    int arr[n];
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
     }
-    qsort(nilai, nilaiSaya, sizeof(int), compare);
-    
-    for(int i = 0; i < nilaiSaya; i++) {
-        printf("%d\n", nilai[i]);
+
+    qsort(arr, n, sizeof(int), compare);
+
+    for(int i = 0; i < n; i++) {
+        printf("%d\n", arr[i]);
     }
-    
+
     return 0;
 }
